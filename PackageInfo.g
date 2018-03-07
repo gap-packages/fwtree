@@ -38,12 +38,18 @@ Persons := [
 
 Status := "deposited",
 
-PackageWWWHome := "http://www.maths.nuigalway.ie/~tobias/fwtree/",
-
+PackageWWWHome  := "https://gap-packages.github.io/fwtree/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/fwtree",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/fwtree-", ~.Version ),
 ArchiveFormats := ".tar.gz",
-ArchiveURL     := Concatenation( ~.PackageWWWHome, "fwtree-", ~.Version ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-README_URL := "http://www.maths.nuigalway.ie/~tobias/fwtree/README",
 
 AbstractHTML :=
   "The <span class=\"pkgname\">fwtree</span> package contains some code related to the computation of trees corresponding to some groups of finite rank, width and obliquity.",
