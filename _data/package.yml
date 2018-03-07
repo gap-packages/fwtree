@@ -1,48 +1,50 @@
-name: GitHubPagesForGAP
-version: 0.2
-date: 2017-02-04
+name: fwtree
+version: 1.0
+date: 2009-04-23
 description: |
-    A GitHub Pages generator for GAP packages
+    Computing trees related to some pro-p-groups of finite width
 
 authors:
-    - name: Max Horn
-      url: http://www.quendi.de/math
-    - name: A. U. Thor
+    - name: Bettina Eick
+      url: http://www-public.tu-bs.de:8080/~beick
+    - name: Tobias Rossmann
+      url: mailto:tobias.rossmann (at) googlemail.com
 
 maintainers:
-    - name: Max Horn
-      url: http://www.quendi.de/math
-    - name: Jan Itor
+    - name: Bettina Eick
+      url: http://www-public.tu-bs.de:8080/~beick
+    - name: Tobias Rossmann
+      url: mailto:tobias.rossmann (at) googlemail.com
 
-GAP: ">=4.8.1"
+GAP: ">=4.4"
 
 needed-pkgs:
-    - name: "GAPDoc"
-      version: ">= 1.2"
-      url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
-    - name: "IO"
-      version: ">= 4.1"
-      url: "https://gap-packages.github.io/io"
+    - name: "Polycyclic"
+      version: ">=1.0"
+      url: "https://gap-packages.github.io/polycyclic/"
+    - name: "Autpgrp"
+      version: ">=1.0"
+      url: "http://www.icm.tu-bs.de/~beick/so.html"
+    - name: "anupq"
+      version: ">=1.0"
+      url: "https://gap-packages.github.io/anupq/"
 
 suggested-pkgs:
-    - name: "orb"
-      version: ">= 4.2"
-      url: "https://gap-packages.github.io/orb"
+    - name: "XGAP"
+      version: ">=1.0"
+      url: "https://gap-packages.github.io/xgap"
 
-www: https://gap-system.github.io/GitHubPagesForGAP/
-readme: README.md
-packageinfo: https://gap-system.github.io/GitHubPagesForGAP/PackageInfo.g
-github: https://github.com/gap-system/GitHubPagesForGAP
+www: http://www.maths.nuigalway.ie/~tobias/fwtree/
+readme: README
+packageinfo: http://www.maths.nuigalway.ie/~tobias/fwtree/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-system/GitHubPagesForGAP/releases/download/v0.2/GitHubPagesForGAP-0.2.tar.gz
-    - name: .tar.bz2
-      url: https://github.com/gap-system/GitHubPagesForGAP/releases/download/v0.2/GitHubPagesForGAP-0.2.tar.bz2
+      url: http://www.maths.nuigalway.ie/~tobias/fwtree/fwtree-1.0.tar.gz
 
 abstract: |
-    This is a pseudo package that contains no actual  <span class="pkgname">GAP</span> code. Instead, it is a template for other  GAP packages that allows to quickly setup GitHub Pages.
+    The <span class="pkgname">fwtree</span> package contains some code related to the computation of trees corresponding to some groups of finite rank, width and obliquity.
 
-status: other
-doc-html: doc/chap0.html
+status: deposited
+doc-html: htm/chapters.htm
 doc-pdf: doc/manual.pdf
