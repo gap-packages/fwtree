@@ -186,7 +186,7 @@ ProPSylowGroupOfPSL := function(d, p, n)
     U := Subgroup(G, u);
 
     # factor 
-    nat := NaturalHomomorphism(G, U);
+    nat := NaturalHomomorphismByNormalSubgroup(G, U);
     H := Image(nat);
     H!.nat := nat;
 
