@@ -1,20 +1,20 @@
 name: fwtree
-version: 1.0
-date: 2009-04-23
+version: 1.1
+date: 2018-03-08
 description: |
     Computing trees related to some pro-p-groups of finite width
 
 authors:
     - name: Bettina Eick
-      url: http://www-public.tu-bs.de:8080/~beick
+      url: http://www.icm.tu-bs.de/~beick
     - name: Tobias Rossmann
-      url: mailto:tobias.rossmann (at) googlemail.com
+      url: mailto:tobias.rossmann@googlemail.com
 
 maintainers:
     - name: Bettina Eick
-      url: http://www-public.tu-bs.de:8080/~beick
+      url: http://www.icm.tu-bs.de/~beick
     - name: Tobias Rossmann
-      url: mailto:tobias.rossmann (at) googlemail.com
+      url: mailto:tobias.rossmann@googlemail.com
 
 GAP: ">=4.4"
 
@@ -24,7 +24,7 @@ needed-pkgs:
       url: "https://gap-packages.github.io/polycyclic/"
     - name: "Autpgrp"
       version: ">=1.0"
-      url: "http://www.icm.tu-bs.de/~beick/so.html"
+      url: "https://gap-packages.github.io/autpgrp/"
     - name: "anupq"
       version: ">=1.0"
       url: "https://gap-packages.github.io/anupq/"
@@ -34,13 +34,13 @@ suggested-pkgs:
       version: ">=1.0"
       url: "https://gap-packages.github.io/xgap"
 
-www: http://www.maths.nuigalway.ie/~tobias/fwtree/
+www: https://gap-packages.github.io/fwtree/
 readme: README
-packageinfo: http://www.maths.nuigalway.ie/~tobias/fwtree/PackageInfo.g
+packageinfo: https://gap-packages.github.io/fwtree/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: http://www.maths.nuigalway.ie/~tobias/fwtree/fwtree-1.0.tar.gz
+      url: https://github.com/gap-packages/fwtree/releases/download/v1.1/fwtree-1.1.tar.gz
 
 abstract: |
     The <span class="pkgname">fwtree</span> package contains some code related to the computation of trees corresponding to some groups of finite rank, width and obliquity.

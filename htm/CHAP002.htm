@@ -62,7 +62,7 @@ an infinite subtree are called sporadic.
 <a name = "SSEC002.1"></a>
 <li><code>GroupsByRankWidthObliquity( p, d, rwo, roots, limit )</code>
 <p>
-determines all <i>p</i>-groups <i>G</i> with <i>G</i>/<font face="symbol">F</font>(<i>G</i>) of order <i>p</i><sup><i>d</i></sup> and
+determines all <i>p</i>-groups <i>G</i> with <i>G</i>/&#934;(<i>G</i>) of order <i>p</i><sup><i>d</i></sup> and
 rank, width and obliquity as prescribed in <i>rwo</i> up to order <i>limit</i>.
 Here <i>p</i> and <i>d</i> are integers, <i>rwo</i> is a list of three integers and
 <i>limit</i> is an integer. 
@@ -95,7 +95,7 @@ because such computations will be terminated.
 <a name = "SSEC002.3"></a>
 <li><code>BoundedDescendantsRWO( G, i, c, rwo)</code>
 <p>
-returns the tree of all descendants of <i>G</i>/<font face="symbol">g</font><sub><i>i</i></sub>(<i>G</i>) of rank <i>rwo</i>[1],
+returns the tree of all descendants of <i>G</i>/&#947;<sub><i>i</i></sub>(<i>G</i>) of rank <i>rwo</i>[1],
 width <i>rwo</i>[2], obliquity <i>rwo</i>[3] and class at most <i>c</i>.
 <p>
 <a name = "SSEC002.4"></a>
@@ -108,14 +108,14 @@ the file <code>gap/xbranch.gi</code>.
 <p>
 Vertices drawn on the same level correspond to groups of the same
 class. If <i>G</i> is a descendant of <i>H</i> in the branch, then <i>G</i> is drawn
-as a filled circle if <font face="symbol">|</font><i>G</i><font face="symbol">|</font> =  <font face="symbol">|</font><i>H</i><font face="symbol">|</font><i>p</i> and as a solid
-box if <font face="symbol">|</font><i>G</i><font face="symbol">|</font> =  <font face="symbol">|</font><i>H</i><font face="symbol">|</font><i>p</i><sup>2</sup>.
+as a filled circle if &#124;<i>G</i>&#124; =  &#124;<i>H</i>&#124;<i>p</i> and as a solid
+box if &#124;<i>G</i>&#124; =  &#124;<i>H</i>&#124;<i>p</i><sup>2</sup>.
 <p>
 <p>
 <h2><a name="SECT003">2.3 Example</a></h2>
 <p><p>
 When run under XGap, the following code constructs and draws the
-branch with root <i>G</i>/<font face="symbol">g</font><sub>5</sub>(<i>G</i>) in the graph of finite 5-groups of
+branch with root <i>G</i>/&#947;<sub>5</sub>(<i>G</i>) in the graph of finite 5-groups of
 rank 3, width 2 and obliquity 0, where <i>G</i> is the Sylow
 pro-<i>p</i>-subgroup of <span class="roman">Aut</span>(<i>sl</i><sub>2</sub>(<b>Q</b><sub>5</sub>)).
 <p>

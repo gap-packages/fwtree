@@ -4,8 +4,8 @@ SetPackageInfo( rec(
 
 PackageName := "fwtree",
 Subtitle := "Computing trees related to some pro-p-groups of finite width",
-Version := "1.0",
-Date := "23/04/2009",
+Version := "1.1",
+Date := "08/03/2018",
 
 Persons := [
   rec(
@@ -13,8 +13,8 @@ Persons := [
     FirstNames    := "Bettina",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "beick (at) tu-bs.de",
-    WWWHome       := "http://www-public.tu-bs.de:8080/~beick",
+    Email         := "beick@tu-bs.de",
+    WWWHome       := "http://www.icm.tu-bs.de/~beick",
     PostalAddress := Concatenation( [
                        "Institut Computational Mathematics\n",
                        "Pockelsstrasse 14, 38106 Braunschweig\n",
@@ -27,7 +27,7 @@ Persons := [
     FirstNames    := "Tobias",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "tobias.rossmann (at) googlemail.com",
+    Email         := "tobias.rossmann@googlemail.com",
     PostalAddress := Concatenation( [
                        "School of Mathematics, Statistics and Applied Mathematics\n",
                        "National University of Ireland, Galway\n",
@@ -38,12 +38,18 @@ Persons := [
 
 Status := "deposited",
 
-PackageWWWHome := "http://www.maths.nuigalway.ie/~tobias/fwtree/",
-
+PackageWWWHome  := "https://gap-packages.github.io/fwtree/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/fwtree",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/fwtree-", ~.Version ),
 ArchiveFormats := ".tar.gz",
-ArchiveURL     := Concatenation( ~.PackageWWWHome, "fwtree-", ~.Version ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-README_URL := "http://www.maths.nuigalway.ie/~tobias/fwtree/README",
 
 AbstractHTML :=
   "The <span class=\"pkgname\">fwtree</span> package contains some code related to the computation of trees corresponding to some groups of finite rank, width and obliquity.",
@@ -67,9 +73,7 @@ Dependencies := rec(
   ExternalConditions := []
 ),
 
-BannerString := "Loading fwtree 1.0... \n",
 AvailabilityTest := ReturnTrue,
-Autoload := false,
-Keywords := ["finite width", "p-groups", "trees"]
+Keywords := ["finite width", "p-groups", "trees"],
  
 ));
