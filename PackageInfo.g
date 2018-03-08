@@ -13,8 +13,8 @@ Persons := [
     FirstNames    := "Bettina",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "beick (at) tu-bs.de",
-    WWWHome       := "http://www-public.tu-bs.de:8080/~beick",
+    Email         := "beick@tu-bs.de",
+    WWWHome       := "http://www.icm.tu-bs.de/~beick",
     PostalAddress := Concatenation( [
                        "Institut Computational Mathematics\n",
                        "Pockelsstrasse 14, 38106 Braunschweig\n",
@@ -27,7 +27,7 @@ Persons := [
     FirstNames    := "Tobias",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "tobias.rossmann (at) googlemail.com",
+    Email         := "tobias.rossmann@googlemail.com",
     PostalAddress := Concatenation( [
                        "School of Mathematics, Statistics and Applied Mathematics\n",
                        "National University of Ireland, Galway\n",
@@ -73,9 +73,7 @@ Dependencies := rec(
   ExternalConditions := []
 ),
 
-BannerString := "Loading fwtree 1.0... \n",
 AvailabilityTest := ReturnTrue,
-Autoload := false,
-Keywords := ["finite width", "p-groups", "trees"]
+Keywords := ["finite width", "p-groups", "trees"],
  
 ));
