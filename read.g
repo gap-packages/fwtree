@@ -8,7 +8,7 @@ ReadPackage("fwtree", "gap/general.gi");
 ReadPackage("fwtree", "gap/sporadic.gi");
 ReadPackage("fwtree", "gap/branches.gi");
 
-XAV := LoadPackage("xgap");
+XAV := TestPackageAvailability("xgap");
 if XAV=true then ReadPackage("fwtree", "gap/xbranch.gi"); fi;
 
 #############################################################################
