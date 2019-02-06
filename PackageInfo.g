@@ -73,6 +73,7 @@ Dependencies := rec(
   ExternalConditions := []
 ),
 
+TestFile := "tst/testall.g",
 AvailabilityTest := ReturnTrue,
 Keywords := ["finite width", "p-groups", "trees"],
  
