@@ -126,16 +126,14 @@ ConstructBoundedDescendants := function( g, branch, classbound, rwo)
 end;
 
 BranchRWO := function( g, i, rwo )
-    local l, this, next, branch, time;
+    local l, this, next, branch;
     
-    time := Runtime();
     g := Image( IsomorphismPcGroup( g ) );
     this := Pq( g : Prime := PrimePGroup( g ), ClassBound := i - 1 );
     next := Pq( g : Prime := PrimePGroup( g ), ClassBound := i );
     
     branch := [];
     ConstructBranch( this, branch, [ next ], rwo );
-    Print( "time: ", StringTime(Runtime() - time), "\n" );
     return branch;
 end;
 
