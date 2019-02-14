@@ -5,7 +5,8 @@ SetPackageInfo( rec(
 PackageName := "fwtree",
 Subtitle := "Computing trees related to some pro-p-groups of finite width",
 Version := "1.1",
-Date := "08/03/2018",
+Date := "08/03/2018", # dd/mm/yyyy format
+License := "GPL-2.0-or-later",
 
 Persons := [
   rec(
