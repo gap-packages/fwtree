@@ -35,7 +35,17 @@ Persons := [
                        "University Road, Galway\n",
                        "Ireland" ] ),
     Place         := "Galway",
-    Institution   := "NUI Galway") ],
+    Institution   := "NUI Galway"),
+
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
+
+],
 
 Status := "deposited",
 
