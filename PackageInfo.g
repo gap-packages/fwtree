@@ -4,8 +4,9 @@ SetPackageInfo( rec(
 
 PackageName := "fwtree",
 Subtitle := "Computing trees related to some pro-p-groups of finite width",
-Version := "1.1",
-Date := "08/03/2018",
+Version := "1.2",
+Date := "30/09/2019", # dd/mm/yyyy format
+License := "GPL-2.0-or-later",
 
 Persons := [
   rec(
@@ -34,7 +35,17 @@ Persons := [
                        "University Road, Galway\n",
                        "Ireland" ] ),
     Place         := "Galway",
-    Institution   := "NUI Galway") ],
+    Institution   := "NUI Galway"),
+
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
+
+],
 
 Status := "deposited",
 
@@ -73,6 +84,7 @@ Dependencies := rec(
   ExternalConditions := []
 ),
 
+TestFile := "tst/testall.g",
 AvailabilityTest := ReturnTrue,
 Keywords := ["finite width", "p-groups", "trees"],
  

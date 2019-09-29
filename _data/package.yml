@@ -1,6 +1,6 @@
 name: fwtree
-version: 1.1
-date: 2018-03-08
+version: 1.2
+date: 2019-09-30
 description: |
     Computing trees related to some pro-p-groups of finite width
 
@@ -15,6 +15,8 @@ maintainers:
       url: http://www.icm.tu-bs.de/~beick
     - name: Tobias Rossmann
       url: mailto:tobias.rossmann@googlemail.com
+    - name: The GAP Team
+      url: mailto:support@gap-system.org
 
 GAP: ">=4.4"
 
@@ -40,7 +42,7 @@ packageinfo: https://gap-packages.github.io/fwtree/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/fwtree/releases/download/v1.1/fwtree-1.1.tar.gz
+      url: https://github.com/gap-packages/fwtree/releases/download/v1.2/fwtree-1.2.tar.gz
 
 abstract: |
     The <span class="pkgname">fwtree</span> package contains some code related to the computation of trees corresponding to some groups of finite rank, width and obliquity.
