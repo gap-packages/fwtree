@@ -4,8 +4,8 @@ SetPackageInfo( rec(
 
 PackageName := "fwtree",
 Subtitle := "Computing trees related to some pro-p-groups of finite width",
-Version := "1.2",
-Date := "30/09/2019", # dd/mm/yyyy format
+Version := "1.3",
+Date := "11/10/2019", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -15,11 +15,13 @@ Persons := [
     IsAuthor      := true,
     IsMaintainer  := true,
     Email         := "beick@tu-bs.de",
-    WWWHome       := "http://www.icm.tu-bs.de/~beick",
-    PostalAddress := Concatenation( [
-                       "Institut Computational Mathematics\n",
-                       "Pockelsstrasse 14, 38106 Braunschweig\n",
-                       "Germany" ] ),
+    WWWHome       := "http://www.iaa.tu-bs.de/beick",
+    PostalAddress := Concatenation(
+               "Institut Analysis und Algebra\n",
+               "TU Braunschweig\n",
+               "Universitätsplatz 2\n",
+               "D-38106 Braunschweig\n",
+               "Germany" ),
     Place         := "Braunschweig",
     Institution   := "TU Braunschweig"),
 
