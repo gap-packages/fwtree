@@ -74,7 +74,6 @@ PackageDoc := rec(
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
   LongTitle := "Computing trees related to some pro-p-groups of finite width",
-  Autoload  := true
 ),
 
 Dependencies := rec(
