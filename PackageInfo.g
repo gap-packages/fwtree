@@ -81,7 +81,7 @@ Dependencies := rec(
   NeededOtherPackages := [["Polycyclic", ">=1.0"],
                           ["Autpgrp", ">=1.0"],
                           ["anupq",">=1.0"]],
-  SuggestedOtherPackages := [["XGAP", ">=1.0"]],
+  SuggestedOtherPackages := [],
   ExternalConditions := []
 ),
 
