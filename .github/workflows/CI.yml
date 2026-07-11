@@ -35,11 +35,7 @@ jobs:
         with:
           gap-version: ${{ matrix.gap-version }}
       - uses: gap-actions/install-pkg@v1
-        with:
-          packages: "anupq" # WORKAROUND: currently distributed version fails
       - uses: gap-actions/build-pkg@v3
-        with:
-          extra-pkgs: "io profiling anupq"
       - uses: gap-actions/run-pkg-tests@v4
       - uses: gap-actions/run-pkg-tests@v4
         with:
