@@ -1,0 +1,191 @@
+<Chapter Label="Methods and functions">
+<Heading>Methods and functions</Heading>
+This chapter describes all the main methods and functions of this
+package.
+<Section Label="Functions for finite $p$-groups">
+<Heading>Functions for finite <M>p</M>-groups</Heading>
+Let <M>G</M> be a finite <M>p</M>-group given by a consistent polycyclic 
+presentation as Pc group.
+<ManSection>
+<Func Name="LCSFactorTypes" Arg="G"/>
+<Description>
+returns the abelian invariants of the lower central series factors of <M>G</M>.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="LCSFactorSizes" Arg="G"/>
+<Description>
+returns the orders of the lower central series factors of <M>G</M>.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="WidthPGroup" Arg="G"/>
+<Description>
+returns the width of <M>G</M>.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="SubgroupRank" Arg="G"/>
+<Description>
+returns the (subgroup-)rank of <M>G</M>.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="Obliquity" Arg="G"/>
+<Description>
+returns the obliquity of <M>G</M>.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="HasObliquityZero" Arg="G"/>
+<Description>
+checks whether <M>G</M> has obliquity 0 and returns true or false.
+</Description>
+</ManSection>
+</Section>
+<Section Label="Functions to generate groups and trees">
+<Heading>Functions to generate groups and trees</Heading>
+Let <M>G(p,rwo)</M> denote the full tree of all finite <M>p</M>-groups with
+rank <M>rwo[1]</M>, width <M>rwo[2]</M> and obliquity <M>rwo[3]</M>. This tree can be
+finite or infinite; if it is infinite, then the infinite
+pro-<M>p</M>-groups of the considered rank, width and obliquity specify
+infinite subtrees of the full tree. The groups not contained in such
+an infinite subtree are called sporadic.
+<ManSection>
+<Func Name="GroupsByRankWidthObliquity" Arg="p, d, rwo, roots, limit"/>
+<Description>
+determines all <M>p</M>-groups <M>G</M> with <M>G/\Phi(G)</M> of order <M>p^d</M> and
+rank, width and obliquity as prescribed in <M>rwo</M> up to order <M>limit</M>.
+Here <M>p</M> and <M>d</M> are integers, <M>rwo</M> is a list of three integers and
+<M>limit</M> is an integer.
+<P/>
+The parameter <M>roots</M> is a list of groups described by their id's 
+with respect to the small groups library. The descendants of the 
+groups described in <M>roots</M> are excluded from the output of this 
+function. This option can be used to prune the tree of groups 
+determined by this function.
+<P/>
+If there are only finitely many sporadic <M>p</M>-groups with given rank,
+width and obliquity, then this function can be used to generate them;
+in this case <M>roots</M> must contain a complete list of all id's of roots
+of infinite subtrees and <M>limit</M> can be set to infinity.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="BranchRWO" Arg="G, i, rwo"/>
+<Description>
+for a stable  quotient (see <Cite Key="ER10"/>) <M>G</M> of a pro-<M>p</M>-group of
+rank <M>rwo[1]</M>, <M>rwo[2]</M> and obliquity <M>rwo[3]</M>, this function returns
+the <M>i</M>-th branch of its corresponding tree. The structure of the tree
+is encoded in a list. If one of the global parameters <C>CHECK_RANK</C> or 
+<C>CHECK_OBLIQUITY</C> is set to false, then checking the corresponding
+invariant is omitted and hence a potentially larger tree is returned.
+<P/>
+The user is advised not to perform any other computations using ANUPQ
+or the <C>pq</C>-program while using this or the following function,
+because such computations will be terminated.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="BoundedDescendantsRWO" Arg="G, i, c, rwo"/>
+<Description>
+returns the tree of all descendants of <M>G/\gamma_i(G)</M> of rank <M>rwo[1]</M>,
+width <M>rwo[2]</M>, obliquity <M>rwo[3]</M> and class at most <M>c</M>.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="DrawBranch" Arg="branch"/>
+<Description>
+if the package is run under XGap, then this function can be used to draw
+a branch as output by the above two functions in the case of width 2.
+The user may wish to improve the quality of the output by modifying
+the file <F>gap/xbranch.gi</F>.
+<P/>
+Vertices drawn on the same level correspond to groups of the same
+class. If <M>G</M> is a descendant of <M>H</M> in the branch, then <M>G</M> is drawn
+as a filled circle if <M>\vert G\vert = \vert H\vert p</M> and as a solid
+box if <M>\vert G\vert = \vert H\vert p^2</M>.
+<P/>
+The package also provides finite quotients of a number of infinite
+pro-<M>p</M>-groups with finite rank, width and obliquity. Throughout the
+section, <M>p</M> is an odd prime.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="ProPSylowGroupOfPSL" Arg="d, p, n"/>
+<Description>
+returns the quotient of the Sylow pro-<M>p</M>-subgroup of
+<M>{ PSL}_d({&QQ;}_p)</M> modulo the matrices which are congruent to the
+identity modulo <M>p^n</M>.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="ProPSylowGroupOfPSF" Arg="p, n"/>
+<Description>
+Let <M>L</M> be the simple Lie algebra of dimension <M>3</M> over <M>&QQ;_p</M>
+which is not isomorphic to <M>sl_2(&QQ;_p)</M>. This function  returns a
+finite quotient of the Sylow pro-<M>p</M>-subgroup of its automorphism  
+group. The parameter <M>n</M> specifies how large this quotient is.
+<P/>
+In <Cite Key="KLGP97"/>, a library of maximal pro-<M>p</M>-groups with finite
+rank, width and obliquity corresponding to the Lie algebras of small
+dimension is provided. Here, we provide a library of large quotients
+of these groups for some of the Lie algebras of type <M>sl_d(K)</M>, where
+<M>K</M> is a finite extension of <M>&QQ;_p</M>. 
+These groups have been determined using the programs described in
+<Cite Key="KLGP97"/>. To be precise, depending on the group, it may be
+necessary to pass to the quotient by one of the last non-trivial terms
+of the lower central series in order to obtain a quotient of the
+respective pro-<M>p</M>-group.
+</Description>
+</ManSection>
+<ManSection>
+<Func Name="ProPQuotient" Arg="p, dim, deg, no"/>
+<Description>
+returns a finite group corresponding to the maximal pro-<M>p</M>-group <M>G</M>
+with Lie algebra <M>sl_{\dim}(K)</M>, where <M>K</M> is a field of
+degree <M>\deg</M> over <M>&QQ;_p</M>. The parameter <M>no</M> specifies the number of
+the group in our database.
+</Description>
+</ManSection>
+</Section>
+<Section Label="Example">
+<Heading>Example</Heading>
+When run under XGap, the following code constructs and draws the
+branch with root <M>G/\gamma_5(G)</M> in the graph of finite 5-groups of
+rank 3, width 2 and obliquity 0, where <M>G</M> is the Sylow
+pro-<M>p</M>-subgroup of <M>{ Aut}(sl_2(&QQ;_5))</M>.
+<Log><![CDATA[
+gap> g := ProPSylowGroupOfPSL(2,5,6);
+Pcp-group with orders [ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
+gap> branch := BranchRWO(g,5,[3,2,0]);;
+ConstructBranch: root-p-class: 4
+Constructed 3 1-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+Constructed 3 2-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+gap> DrawBranch(branch);
+]]></Log>
+A window with the following graph should appear.
+<P/>
+<Alt Only="LaTeX"><![CDATA[
+\begin{center}\includegraphics[width=8cm]{branch}\end{center}
+]]></Alt>
+<Alt Only="HTML"><![CDATA[
+<center><img src="branch.png" alt="a branch of the tree"/></center>
+]]></Alt>
+</Section>
+</Chapter>
