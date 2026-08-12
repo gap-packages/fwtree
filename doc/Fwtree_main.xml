@@ -39,7 +39,7 @@ returns the obliquity of <M>G</M>.
 <ManSection>
 <Func Name="HasObliquityZero" Arg="G"/>
 <Description>
-checks whether <M>G</M> has obliquity 0 and returns true or false.
+checks whether <M>G</M> has obliquity 0 and returns <K>true</K> or <K>false</K>.
 </Description>
 </ManSection>
 </Section>
@@ -59,7 +59,7 @@ rank, width and obliquity as prescribed in <M>rwo</M> up to order <M>limit</M>.
 Here <M>p</M> and <M>d</M> are integers, <M>rwo</M> is a list of three integers and
 <M>limit</M> is an integer.
 <P/>
-The parameter <M>roots</M> is a list of groups described by their id's 
+The parameter <M>roots</M> is a list of groups described by their ids 
 with respect to the small groups library. The descendants of the 
 groups described in <M>roots</M> are excluded from the output of this 
 function. This option can be used to prune the tree of groups 
@@ -67,7 +67,7 @@ determined by this function.
 <P/>
 If there are only finitely many sporadic <M>p</M>-groups with given rank,
 width and obliquity, then this function can be used to generate them;
-in this case <M>roots</M> must contain a complete list of all id's of roots
+in this case <M>roots</M> must contain a complete list of all ids of roots
 of infinite subtrees and <M>limit</M> can be set to infinity.
 </Description>
 </ManSection>
@@ -75,7 +75,7 @@ of infinite subtrees and <M>limit</M> can be set to infinity.
 <Func Name="BranchRWO" Arg="G, i, rwo"/>
 <Description>
 for a stable  quotient (see <Cite Key="ER10"/>) <M>G</M> of a pro-<M>p</M>-group of
-rank <M>rwo[1]</M>, <M>rwo[2]</M> and obliquity <M>rwo[3]</M>, this function returns
+rank <M>rwo[1]</M>, width <M>rwo[2]</M> and obliquity <M>rwo[3]</M>, this function returns
 the <M>i</M>-th branch of its corresponding tree. The structure of the tree
 is encoded in a list. If one of the global parameters <C>CHECK_RANK</C> or 
 <C>CHECK_OBLIQUITY</C> is set to false, then checking the corresponding
@@ -96,7 +96,7 @@ width <M>rwo[2]</M>, obliquity <M>rwo[3]</M> and class at most <M>c</M>.
 <ManSection>
 <Func Name="DrawBranch" Arg="branch"/>
 <Description>
-if the package is run under XGap, then this function can be used to draw
+if the package is run under &XGAP;, then this function can be used to draw
 a branch as output by the above two functions in the case of width 2.
 The user may wish to improve the quality of the output by modifying
 the file <F>gap/xbranch.gi</F>.
@@ -151,7 +151,7 @@ the group in our database.
 </Section>
 <Section Label="Example">
 <Heading>Example</Heading>
-When run under XGap, the following code constructs and draws the
+When run under &XGAP;, the following code constructs and draws the
 branch with root <M>G/\gamma_5(G)</M> in the graph of finite 5-groups of
 rank 3, width 2 and obliquity 0, where <M>G</M> is the Sylow
 pro-<M>p</M>-subgroup of <M>{ Aut}(sl_2(&QQ;_5))</M>.

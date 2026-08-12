@@ -48,12 +48,12 @@ Fwtree is available from its homepage
 			  Installing Fwtree
 			  -----------------
 
-Download fwtree-1.0.tar.gz and extract  it into the `pkg' directory of
-your GAP-installation. The package can  then be loaded from within GAP
-using ‘LoadPackage("fwtree").
+Download the archive and extract it into the `pkg' directory of your
+GAP-installation. The package can then be loaded from within GAP using
+`LoadPackage("fwtree");'.
 
 			    Documentation
 			    -------------
 
-The documentation of fwtree is available in the `doc' directory and on
-the homepage.
+The documentation of fwtree is available in the `doc' directory, as
+`doc/manual.pdf' or `doc/chap0_mj.html', and on the homepage.
