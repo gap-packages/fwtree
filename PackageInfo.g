@@ -77,7 +77,7 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">=4.4",
+  GAP := ">=4.12",
   NeededOtherPackages := [["Polycyclic", ">=1.0"],
                           ["Autpgrp", ">=1.0"],
                           ["anupq",">=1.0"]],
