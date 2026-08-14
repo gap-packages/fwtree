@@ -1,0 +1,17 @@
+<Chapter Label="Introduction">
+<Heading>Introduction</Heading>
+This package provides &GAP;-functions to reproduce the experimental
+results described in our paper <Cite Key="ER10"/>.
+<P/>
+More precisely, it provides
+<List>
+<Item> functions to determine the rank, width and obliquity
+  of a finite <M>p</M>-group,
+</Item>
+<Item> functions to investigate the graph of all finite <M>p</M>-groups of a
+  given rank, width and obliquity using the ANUPQ-package <Cite Key="ANU06"/>, and
+</Item>
+<Item> a library of finite quotients of certain infinite pro-<M>p</M>-groups
+  of finite rank, width and obliquity.</Item>
+</List>
+</Chapter>
