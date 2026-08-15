@@ -1,5 +1,12 @@
 This file describes changes in the fwtree package.
 
+## 1.4 (2026-08-15)
+
+  - Convert the documentation to GAPDoc/AutoDoc, and fix minor errors in it
+  - Raise the minimum GAP version to 4.12
+  - Drop the XGAP suggestion, which was no longer used
+  - Janitorial changes
+
 ## 1.3 (2020-01-28)
 
   - Fix the version recorded in `VERSION`
