@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (fwtree) - Chapter 2: Methods and functions</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap2"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap2.html">[MathJax off]</a></p>
+<p><a id="X79F109017C7B55FE" name="X79F109017C7B55FE"></a></p>
+<div class="ChapSects"><a href="chap2_mj.html#X79F109017C7B55FE">2 <span class="Heading">Methods and functions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X801523CC80B4A7DC">2.1 <span class="Heading">Functions for finite <span class="SimpleMath">\(p\)</span>-groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7B89F31E7ED1CE7A">2.1-1 LCSFactorTypes</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X857313FB84B01D07">2.1-2 LCSFactorSizes</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8764F79A803E905E">2.1-3 WidthPGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7F859DCE7F427440">2.1-4 SubgroupRank</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8052634F7B24CF0A">2.1-5 Obliquity</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X828D5AAF87F207C1">2.1-6 HasObliquityZero</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X824FDDA5832F6F21">2.2 <span class="Heading">Functions to generate groups and trees</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7E620A06800F206E">2.2-1 GroupsByRankWidthObliquity</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X783D9525782D4142">2.2-2 BranchRWO</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X827F83317B48F792">2.2-3 BoundedDescendantsRWO</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X82C839698175D2E2">2.2-4 DrawBranch</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X814A28AE7D4C6153">2.2-5 ProPSylowGroupOfPSL</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7F47763F7A9D30E4">2.2-6 ProPSylowGroupOfPSF</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X78C5689781C82E70">2.2-7 ProPQuotient</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X85861B017AEEC50B">2.3 <span class="Heading">Example</span></a>
+</span>
+</div>
+</div>
+
+<h3>2 <span class="Heading">Methods and functions</span></h3>
+
+<p>This chapter describes all the main methods and functions of this package.</p>
+
+<p><a id="X801523CC80B4A7DC" name="X801523CC80B4A7DC"></a></p>
+
+<h4>2.1 <span class="Heading">Functions for finite <span class="SimpleMath">\(p\)</span>-groups</span></h4>
+
+<p>Let <span class="SimpleMath">\(G\)</span> be a finite <span class="SimpleMath">\(p\)</span>-group given by a consistent polycyclic presentation as Pc group.</p>
+
+<p><a id="X7B89F31E7ED1CE7A" name="X7B89F31E7ED1CE7A"></a></p>
+
+<h5>2.1-1 LCSFactorTypes</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LCSFactorTypes</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns the abelian invariants of the lower central series factors of <span class="SimpleMath">\(G\)</span>.</p>
+
+<p><a id="X857313FB84B01D07" name="X857313FB84B01D07"></a></p>
+
+<h5>2.1-2 LCSFactorSizes</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LCSFactorSizes</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns the orders of the lower central series factors of <span class="SimpleMath">\(G\)</span>.</p>
+
+<p><a id="X8764F79A803E905E" name="X8764F79A803E905E"></a></p>
+
+<h5>2.1-3 WidthPGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; WidthPGroup</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns the width of <span class="SimpleMath">\(G\)</span>.</p>
+
+<p><a id="X7F859DCE7F427440" name="X7F859DCE7F427440"></a></p>
+
+<h5>2.1-4 SubgroupRank</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SubgroupRank</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns the (subgroup-)rank of <span class="SimpleMath">\(G\)</span>.</p>
+
+<p><a id="X8052634F7B24CF0A" name="X8052634F7B24CF0A"></a></p>
+
+<h5>2.1-5 Obliquity</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Obliquity</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns the obliquity of <span class="SimpleMath">\(G\)</span>.</p>
+
+<p><a id="X828D5AAF87F207C1" name="X828D5AAF87F207C1"></a></p>
+
+<h5>2.1-6 HasObliquityZero</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HasObliquityZero</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>checks whether <span class="SimpleMath">\(G\)</span> has obliquity 0 and returns <code class="keyw">true</code> or <code class="keyw">false</code>.</p>
+
+<p><a id="X824FDDA5832F6F21" name="X824FDDA5832F6F21"></a></p>
+
+<h4>2.2 <span class="Heading">Functions to generate groups and trees</span></h4>
+
+<p>Let <span class="SimpleMath">\(G(p,rwo)\)</span> denote the full tree of all finite <span class="SimpleMath">\(p\)</span>-groups with rank <span class="SimpleMath">\(rwo[1]\)</span>, width <span class="SimpleMath">\(rwo[2]\)</span> and obliquity <span class="SimpleMath">\(rwo[3]\)</span>. This tree can be finite or infinite; if it is infinite, then the infinite pro-<span class="SimpleMath">\(p\)</span>-groups of the considered rank, width and obliquity specify infinite subtrees of the full tree. The groups not contained in such an infinite subtree are called sporadic.</p>
+
+<p><a id="X7E620A06800F206E" name="X7E620A06800F206E"></a></p>
+
+<h5>2.2-1 GroupsByRankWidthObliquity</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GroupsByRankWidthObliquity</code>( <var class="Arg">p</var>, <var class="Arg">d</var>, <var class="Arg">rwo</var>, <var class="Arg">roots</var>, <var class="Arg">limit</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>determines all <span class="SimpleMath">\(p\)</span>-groups <span class="SimpleMath">\(G\)</span> with <span class="SimpleMath">\(G/\Phi(G)\)</span> of order <span class="SimpleMath">\(p^d\)</span> and rank, width and obliquity as prescribed in <span class="SimpleMath">\(rwo\)</span> up to order <span class="SimpleMath">\(limit\)</span>. Here <span class="SimpleMath">\(p\)</span> and <span class="SimpleMath">\(d\)</span> are integers, <span class="SimpleMath">\(rwo\)</span> is a list of three integers and <span class="SimpleMath">\(limit\)</span> is an integer.</p>
+
+<p>The parameter <span class="SimpleMath">\(roots\)</span> is a list of groups described by their ids with respect to the small groups library. The descendants of the groups described in <span class="SimpleMath">\(roots\)</span> are excluded from the output of this function. This option can be used to prune the tree of groups determined by this function.</p>
+
+<p>If there are only finitely many sporadic <span class="SimpleMath">\(p\)</span>-groups with given rank, width and obliquity, then this function can be used to generate them; in this case <span class="SimpleMath">\(roots\)</span> must contain a complete list of all ids of roots of infinite subtrees and <span class="SimpleMath">\(limit\)</span> can be set to infinity.</p>
+
+<p><a id="X783D9525782D4142" name="X783D9525782D4142"></a></p>
+
+<h5>2.2-2 BranchRWO</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BranchRWO</code>( <var class="Arg">G</var>, <var class="Arg">i</var>, <var class="Arg">rwo</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>for a stable quotient (see <a href="chapBib_mj.html#biBER10">[ER10]</a>) <span class="SimpleMath">\(G\)</span> of a pro-<span class="SimpleMath">\(p\)</span>-group of rank <span class="SimpleMath">\(rwo[1]\)</span>, width <span class="SimpleMath">\(rwo[2]\)</span> and obliquity <span class="SimpleMath">\(rwo[3]\)</span>, this function returns the <span class="SimpleMath">\(i\)</span>-th branch of its corresponding tree. The structure of the tree is encoded in a list. If one of the global parameters <code class="code">CHECK_RANK</code> or <code class="code">CHECK_OBLIQUITY</code> is set to false, then checking the corresponding invariant is omitted and hence a potentially larger tree is returned.</p>
+
+<p>The user is advised not to perform any other computations using ANUPQ or the <code class="code">pq</code>-program while using this or the following function, because such computations will be terminated.</p>
+
+<p><a id="X827F83317B48F792" name="X827F83317B48F792"></a></p>
+
+<h5>2.2-3 BoundedDescendantsRWO</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BoundedDescendantsRWO</code>( <var class="Arg">G</var>, <var class="Arg">i</var>, <var class="Arg">c</var>, <var class="Arg">rwo</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns the tree of all descendants of <span class="SimpleMath">\(G/\gamma_i(G)\)</span> of rank <span class="SimpleMath">\(rwo[1]\)</span>, width <span class="SimpleMath">\(rwo[2]\)</span>, obliquity <span class="SimpleMath">\(rwo[3]\)</span> and class at most <span class="SimpleMath">\(c\)</span>.</p>
+
+<p><a id="X82C839698175D2E2" name="X82C839698175D2E2"></a></p>
+
+<h5>2.2-4 DrawBranch</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DrawBranch</code>( <var class="Arg">branch</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>if the package is run under <strong class="pkg">XGAP</strong>, then this function can be used to draw a branch as output by the above two functions in the case of width 2. The user may wish to improve the quality of the output by modifying the file <code class="file">gap/xbranch.gi</code>.</p>
+
+<p>Vertices drawn on the same level correspond to groups of the same class. If <span class="SimpleMath">\(G\)</span> is a descendant of <span class="SimpleMath">\(H\)</span> in the branch, then <span class="SimpleMath">\(G\)</span> is drawn as a filled circle if <span class="SimpleMath">\(\vert G\vert = \vert H\vert p\)</span> and as a solid box if <span class="SimpleMath">\(\vert G\vert = \vert H\vert p^2\)</span>.</p>
+
+<p>The package also provides finite quotients of a number of infinite pro-<span class="SimpleMath">\(p\)</span>-groups with finite rank, width and obliquity. Throughout the section, <span class="SimpleMath">\(p\)</span> is an odd prime.</p>
+
+<p><a id="X814A28AE7D4C6153" name="X814A28AE7D4C6153"></a></p>
+
+<h5>2.2-5 ProPSylowGroupOfPSL</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ProPSylowGroupOfPSL</code>( <var class="Arg">d</var>, <var class="Arg">p</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns the quotient of the Sylow pro-<span class="SimpleMath">\(p\)</span>-subgroup of <span class="SimpleMath">\({ PSL}_d({ℚ}_p)\)</span> modulo the matrices which are congruent to the identity modulo <span class="SimpleMath">\(p^n\)</span>.</p>
+
+<p><a id="X7F47763F7A9D30E4" name="X7F47763F7A9D30E4"></a></p>
+
+<h5>2.2-6 ProPSylowGroupOfPSF</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ProPSylowGroupOfPSF</code>( <var class="Arg">p</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Let <span class="SimpleMath">\(L\)</span> be the simple Lie algebra of dimension <span class="SimpleMath">\(3\)</span> over <span class="SimpleMath">\(ℚ_p\)</span> which is not isomorphic to <span class="SimpleMath">\(sl_2(ℚ_p)\)</span>. This function returns a finite quotient of the Sylow pro-<span class="SimpleMath">\(p\)</span>-subgroup of its automorphism group. The parameter <span class="SimpleMath">\(n\)</span> specifies how large this quotient is.</p>
+
+<p>In <a href="chapBib_mj.html#biBKLGP97">[KLP97]</a>, a library of maximal pro-<span class="SimpleMath">\(p\)</span>-groups with finite rank, width and obliquity corresponding to the Lie algebras of small dimension is provided. Here, we provide a library of large quotients of these groups for some of the Lie algebras of type <span class="SimpleMath">\(sl_d(K)\)</span>, where <span class="SimpleMath">\(K\)</span> is a finite extension of <span class="SimpleMath">\(ℚ_p\)</span>. These groups have been determined using the programs described in <a href="chapBib_mj.html#biBKLGP97">[KLP97]</a>. To be precise, depending on the group, it may be necessary to pass to the quotient by one of the last non-trivial terms of the lower central series in order to obtain a quotient of the respective pro-<span class="SimpleMath">\(p\)</span>-group.</p>
+
+<p><a id="X78C5689781C82E70" name="X78C5689781C82E70"></a></p>
+
+<h5>2.2-7 ProPQuotient</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ProPQuotient</code>( <var class="Arg">p</var>, <var class="Arg">dim</var>, <var class="Arg">deg</var>, <var class="Arg">no</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>returns a finite group corresponding to the maximal pro-<span class="SimpleMath">\(p\)</span>-group <span class="SimpleMath">\(G\)</span> with Lie algebra <span class="SimpleMath">\(sl_{\dim}(K)\)</span>, where <span class="SimpleMath">\(K\)</span> is a field of degree <span class="SimpleMath">\(\deg\)</span> over <span class="SimpleMath">\(ℚ_p\)</span>. The parameter <span class="SimpleMath">\(no\)</span> specifies the number of the group in our database.</p>
+
+<p><a id="X85861B017AEEC50B" name="X85861B017AEEC50B"></a></p>
+
+<h4>2.3 <span class="Heading">Example</span></h4>
+
+<p>When run under <strong class="pkg">XGAP</strong>, the following code constructs and draws the branch with root <span class="SimpleMath">\(G/\gamma_5(G)\)</span> in the graph of finite 5-groups of rank 3, width 2 and obliquity 0, where <span class="SimpleMath">\(G\)</span> is the Sylow pro-<span class="SimpleMath">\(p\)</span>-subgroup of <span class="SimpleMath">\({ Aut}(sl_2(ℚ_5))\)</span>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := ProPSylowGroupOfPSL(2,5,6);</span>
+Pcp-group with orders [ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">branch := BranchRWO(g,5,[3,2,0]);;</span>
+ConstructBranch: root-p-class: 4
+Constructed 3 1-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+Constructed 3 2-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+ConstructBranch: root-p-class: 5
+Constructed 0 1-step descendants.
+Constructed 0 2-step descendants.
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DrawBranch(branch);</span>
+</pre></div>
+
+<p>A window with the following graph should appear.</p>
+
+<p><center><img src="branch.png" alt="a branch of the tree"/></center></p>
+
+<p> </p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>
